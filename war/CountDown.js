@@ -11,13 +11,14 @@ window.onload=function()
 	var calSec=document.getElementById("sec");
     var button=document.getElementById("button");
     var start = true;
-   
+   var a  = [];
+   var a1=document.getElementById("a");
     var Interval;
     button.onclick = function()
     {
     	if(start)
     		{
-    	ms = hrs =sec=0;
+    	ms  =min=hrs =sec=0;
     	calhrs.innerHTML=calMin.innerHTML=calSec.innerHTML="00";
     	clearInterval(Interval);
     	Interval=setInterval(startTimer,10);
@@ -25,7 +26,9 @@ window.onload=function()
     		}
     	else
     		{
-
+    		var ttime = setTime(hrs,min,sec);
+    		a.push(ttime);
+    		a1.innerHTML = a;
     	clearInterval(Interval);
     	start=true;
     		}
@@ -33,7 +36,7 @@ window.onload=function()
     }
     function startTimer()
     {
-    	console.log("hii");
+    	
     	ms++;
     	if(ms > 99) {
     		sec++;
@@ -81,5 +84,15 @@ window.onload=function()
     		}
     	
     }
-
+    function setTime(hrs,min,sec)
+    {
+    	var totalHour=(hrs*60) + " H :" ;
+    	var totalMin =min +" min ";
+    	var totalSec = sec/60;
+    	var n = totalHour.concat(totalMin) +'<br />';
+    	
+    	return n ;
+    }
+    
+    
 };

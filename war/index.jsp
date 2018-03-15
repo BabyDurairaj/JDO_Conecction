@@ -27,19 +27,27 @@
        font-family:arial;
 
     }
+    h1{
+    background-color:black;
+    color:white;
+    text-align:center;
+    }
       </style>
 </head>
 <body>
+<h1>Register Today</h1>
    <div id="accordion">
    
        
        
          <div>
-             <span><button class="btn btn-link" data-toggle="collapse "  data-target="#collapsedThree" aria-expanded="true" aria-controls="collapseThree" >SignUp</button></span>
-             <span><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+             <span> <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          Sign Up
+             </button>
+       </span> 
+      <span> <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
           Sign In
            </button>
-           </span>
          </div>
           <form action="Registration" method="post" >
                <div id="collapseThree" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
@@ -105,8 +113,8 @@
      }}
      </script>
    
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
-
+           
 
 </body></html>

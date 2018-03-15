@@ -6,6 +6,7 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import com.google.appengine.api.datastore.Blob;
 import com.google.appengine.api.datastore.Key;
 
 
@@ -22,9 +23,7 @@ public class UserDetails {
 		private String password;
 		@Persistent
 		String mobile;
-		public String getMobile() {
-			return mobile;
-		}
+		
 
 		public void setMobile(String mobile) {
 			this.mobile = mobile;
@@ -32,12 +31,15 @@ public class UserDetails {
 
 		UserDetails(String email,String name,String password, String mobile)
 		{
+		
 			this.email=email;
 			this.name=name;
 			this.password=password;
 			this.mobile=mobile;
 		}
 		
+		
+
 		public Key getKey() {
 			return key;
 		}
@@ -61,6 +63,11 @@ public class UserDetails {
 		}
 		public void setPassword(String password) {
 			this.password = password;
+		}
+
+		public String getMobile() {
+			// TODO Auto-generated method stub
+			return mobile;
 		}
 
 		
